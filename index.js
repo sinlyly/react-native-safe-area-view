@@ -202,7 +202,7 @@ class SafeView extends Component {
       paddingRight: touchesRight ? this._getInset('right') : 0,
     };
 
-    if (forceInset) {
+    if (forceInset && forceInset.enable) {
       Object.keys(forceInset).forEach(key => {
         let inset = forceInset[key];
 
